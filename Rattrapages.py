@@ -29,5 +29,5 @@ agri = open_data()
 
 #Adding the filters on thhe dataset
 st.sidebar.header('Choose what to show')
-categories = agri['GRP CULTU'].unique().tolist
+categories = agri['GRP CULTU'].unique().tolist()
 categories_choosed = st.sidebar.multiselect('Culture Categories', categories, categories)
