@@ -14,7 +14,7 @@ import os
 #Opening and loading the data
 @st.cache
 def open_data():
-    return pd.read_csv('C:\data_vis.csv')
+    return pd.read_csv('data_vis.csv')
 
 
 #Settings of the visualisation
