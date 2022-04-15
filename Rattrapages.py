@@ -40,9 +40,7 @@ slide = st.slider('Linear graph or Map graph here :',min_value= 0 , max_value= 2
 graph = st.sidebar.selectbox(label ="Choose what graphh to use",options=['Pie','Bar'])
 colonnes = agri.select_dtypes(['float','int']).columns
 
-#Coordonates for the bar
-scat1 = {"":"","Culture Code" : agri['CODE_CULTU'],"Culture Library" : agri['LBL_CULTU']}
-scat2 = {"":"","Surface" : agri['SURFACE_HA']}
+
 
 #Add the figures
 @measure
