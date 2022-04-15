@@ -19,7 +19,7 @@ def open_data(nrows):
 
 
 #Settings of the visualisation
-st.set_page_config(page_title="Data Visualisation Rattrapages", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Data Visualisation Rattrapages", layout="centered", initial_sidebar_state="expanded")
 
 #Open the data
 agri = open_data(50)
