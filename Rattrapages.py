@@ -32,7 +32,7 @@ agri = open_data(50)
 st.sidebar.header('Choose what to show')
 slide = st.slider('Linear graph or Map graph here :',min_value= 0 , max_value= 2)
 graph = st.sidebar.selectbox(label ="Choose what graphh to use",options=['Pie','Bar'])
-colonnes =df.select_dtypes(['float','int']).columns
+colonnes = agri.select_dtypes(['float','int']).columns
 
 #Coordonates for the bar
 scat1 = {"":"","Culture Code" : agri['CODE_CULTU'],"Culture Library" : agri['LBL_CULTU']}
