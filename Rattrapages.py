@@ -4,7 +4,6 @@ pip install matplotlib
 import numpy as np
 import streamlit as st 
 import pandas as pd
-import matplotlib.pyplot as plt
 import time
 import seaborn as sns
 import os
