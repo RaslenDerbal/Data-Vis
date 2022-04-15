@@ -26,6 +26,10 @@ agri = open_data(50)
 st.title('French agriculture vizualisation tool')
 st.markdown("""Here is a simple visualization the data obtained on datagouv.fr """)
 
+if st.checkbox('Do you want to see the dataset?'):
+    st.subheader('Here it is')
+    st.write(agri.sample(frac= 0.5,replace = True, random_state=1))
+
 
 
 #Plot the data in multiple forms
