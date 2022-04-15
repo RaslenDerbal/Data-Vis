@@ -3,7 +3,9 @@
 
 import numpy as np
 import streamlit as st 
+import matplotlib.pyplot as plt
 import pandas as pd
+import plotly.figure_factory as ff
 import time
 import seaborn as sns
 import os
@@ -11,7 +13,7 @@ import os
 #Opening and loading the data
 @st.cache
 def open_data():
-    return pd.read_csv('C:\data_vis.csv')
+    return pd.read_csv('data_vis.csv')
 
 
 #Settings of the visualisation
