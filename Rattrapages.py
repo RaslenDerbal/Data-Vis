@@ -26,37 +26,7 @@ agri = open_data(50)
 st.title('French agriculture vizualisation tool')
 st.markdown("""Here is a simple visualization the data obtained on datagouv.fr """)
 
+st.write(agri)
 
-
-#Plot the data in multiple forms
-
-#Adding the filters on the dataset
-st.sidebar.header('Choose what to show')
-slide = st.slider('Linear graph or Map graph here :',min_value= 0 , max_value= 2)
-graph = st.sidebar.selectbox(label ="Choose what graphh to use",options=['Pie','Bar'])
-colonnes = agri.select_dtypes(['float','int']).columns
-
-#Coordonates for the bar
-scat1 = {"":"","Culture Code" : agri['CODE_CULTU'],"Culture Library" : agri['LBL_CULTU']}
-scat2 = {"":"","Surface" : agri['SURFACE_HA']}
-
-#Add the figures
-@measure
-def figure(agri):
-    
-    #Pie chart
-    if graph == 'Pie':
-        camembert = px.pie(agri, values='GRP_CULTU', names='Cultures', color_discrete_sequence=px.colors.sequential.RdBu)
-        camembert.show()
-        
-    #Bar chart
-    if graph == 'Bar':
-        st.sidebar.subheader('Choose values to show')
-        abscissa = st.sidebar.selectbox('Abscissa', options=scat1)
-        ordonate =  st.sidebar.selectbox('Ordonate', options=scat2)
-        barre = px.scatter(agri, x=abscissa ,y=ordonate, color_discrete_sequence=px.colors.sequential.RdBu)
-        barre.show()
-        
-        
         
         
