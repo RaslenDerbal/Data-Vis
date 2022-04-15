@@ -23,6 +23,8 @@ st.set_page_config(page_title="Data Visualisation Rattrapages", layout="centered
 
 #Open the data
 agri = open_data(50)
+st.title('French agriculture vizualisation tool')
+st.markdown("""Here is a simple visualization the data obtained on datagouv.fr """)
 
 
 
