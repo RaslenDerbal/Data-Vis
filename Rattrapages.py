@@ -15,7 +15,7 @@ import os
 #Opening and loading the data
 @st.cache
 def open_data(nrows):
-    return pd.read_csv(os.path.join(os.getcwd(),'data_vis.csv'))
+    return pd.read_csv('data_vis.csv',nrows=nrows)
 
 
 #Settings of the visualisation
