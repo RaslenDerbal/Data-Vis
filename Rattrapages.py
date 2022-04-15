@@ -55,8 +55,4 @@ def figure(agri):
         ordonate =  st.sidebar.selectbox('Ordonate', options=scat2)
         barre = px.scatter(agri, x=abscissa ,y=ordonate, color_discrete_sequence=px.colors.sequential.RdBu)
         barre.show()
-        
-        
-
-        
-        
+      
