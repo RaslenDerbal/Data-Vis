@@ -3,9 +3,10 @@
 
 import numpy as np
 import streamlit as st 
-import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.figure_factory as ff
+import matplotlib
+import matplotlib.pyplot as plt
 import time
 import seaborn as sns
 import os
@@ -13,7 +14,7 @@ import os
 #Opening and loading the data
 @st.cache
 def open_data():
-    return pd.read_csv('data_vis.csv')
+    return pd.read_csv('C:\data_vis.csv')
 
 
 #Settings of the visualisation
@@ -22,4 +23,12 @@ st.set_page_config(page_title="Data Visualisation Rattrapages", layout="centered
 #Open the data
 agri = open_data()
 
-st.write(agri)
+
+
+#Plot the data in multiple forms
+
+#Adding the filters on thhe dataset
+st.sidebar.header('Choose what to show')
+categories = agri['GRP CULTU'].unique().tolist
+categories_choosed = st.sidebar.multiselect('Culture Categories', categories, default=None, format_func=special_internal_function, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False)
+
