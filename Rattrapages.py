@@ -37,8 +37,8 @@ graph = st.sidebar.selectbox(label ="Choose what graphh to use",options=['Pie','
 colonnes = agri.select_dtypes(['float','int']).columns
 
 #Coordonates for the bar
-scat1 = {"":"","Culture Code" : agri['2'],"Culture Library" : agri['3']}
-scat2 = {"":"","Surface" : agri['5']}
+scat1 = {"":"","Culture Code" : agri['CODE_CULTU'],"Culture Library" : agri['LBL_CULTU']}
+scat2 = {"":"","Surface" : agri['SURFACE_HA']}
 
 #Add the figures
 @measure
